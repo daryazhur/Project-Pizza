@@ -1,0 +1,348 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+:root {
+    --background-color: #121212; 
+    --grey-100: hsl(0, 0%, 10%);
+    --grey-200: hsl(0, 0%, 17%);
+    --grey-300: hsl(0, 0%, 30%);
+    --grey-900: hsl(0, 0%, 90%);
+
+    --primary: #B11500; 
+    --section: #F8E8DA; 
+    --text-color: hsl(0, 0%, 90%);;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: 20px auto 20px;
+    grid-template-rows: repeat(3, auto);
+}
+
+h1 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-inline: 20px;
+}
+
+/* 
+****************************************
+    HEADER
+****************************************
+*/
+
+.hlavicka {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    display: flex;
+    padding-inline: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid var(--grey-300);
+    background-color: var(--grey-100);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.hlavicka__logo {
+    border-radius: 50%;
+    background-color: var(--grey-900);
+    width: 100px;
+    height: 100px;
+}
+
+.menu__checkbox {
+    display: none;
+}
+
+.menu__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    background-color: var(--grey-200);
+}
+
+.menu__item {
+    border-bottom: 1px solid var(--primary);
+}
+
+.menu__link {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-color);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.menu__toggler {
+    cursor: pointer;
+}
+
+.menu__checkbox:checked ~ .menu__list {
+    display: block;
+}
+
+.menu__toggler--img {
+    width: 50px;
+}
+
+/* 
+****************************************
+    OBSAH
+****************************************
+*/
+
+main {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: var(--grey-100);
+    margin-top: 5px;
+}
+
+/* 
+****************************************
+    CONTACTS
+****************************************
+*/
+
+.kontakt {
+    grid-column: 2;
+    grid-row: 2;
+    background-image: url(./../img/kontakty.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.kontakt__info--text {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    margin: 0;
+    color: #B11500;
+}
+
+
+h2 {
+    font-size: 1.5rem;
+    font-family: "Capriola", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #B11500;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.kontakt__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+}
+
+.kontakt-adresa, .kontakt-doba, .kontakt-odkazy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--section);
+    text-align: left;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 20%;
+}
+
+.kontakt-odkazy a {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    margin: 0;
+    color: #B11500;
+    text-decoration: none;
+}
+
+.kontakt-adresa {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.kontakt-doba {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.kontakt-odkazy {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.kontakt__info-ikona {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* 
+****************************************
+    FOOTER
+****************************************
+*/
+
+footer {
+    grid-column: 2;
+    grid-row: 3;
+    border-top: 1px solid var(--grey-300);
+    padding-inline: 50px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: var(--grey-100);
+    text-align: center;
+    color: var(--text-color);
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+}
+
+
+@media(min-width: 768px) {    
+    .hlavicka {
+        flex-direction: row;
+    }
+
+    .menu__toggler {
+        display: none;
+    }
+
+    .menu__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+        overflow: hidden;
+        display: flex !important; 
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        background-color: var(--grey-100);
+    }
+
+    .menu__item {
+        border-bottom: none;
+    }
+    
+    .menu__link:hover {
+        color: var(--primary);
+        cursor: pointer;
+        border-bottom: 1px solid var(--primary);
+    }
+}
+
+@media(min-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: 120px auto 120px;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .hlavicka {
+        padding-inline: 120px;
+    }
+    
+    .menu__link {
+        border-inline: none;
+    }
+    
+    .menu__link:hover {
+        color: var(--primary);
+        cursor: pointer;
+        border-bottom: 1px solid var(--primary);
+    }
+    /* 
+    ****************************************
+        CONTACTS
+    ****************************************
+    */
+    .kontakt__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto;
+        column-gap: 50px;
+    }
+    
+    .kontakt-adresa, .kontakt-doba, .kontakt-odkazy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--section);
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        margin-block: 80px;
+        padding: 20px;
+        border-radius: 20%;
+        width: 210px;
+        height: 240px;
+    }
+    
+    .kontakt-odkazy a {
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+        color: #B11500;
+        text-decoration: none;
+    }
+    
+    .kontakt-adresa {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .kontakt-doba {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .kontakt-odkazy {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    
+    .kontakt__info-ikona {
+        width: 50px;
+        margin-bottom: 20px;
+    }
+}
