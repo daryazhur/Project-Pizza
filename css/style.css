@@ -30,6 +30,13 @@ h1 {
     margin-inline: 20px;
 }
 
+main {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: var(--grey-100);
+    margin-top: 5px;
+}
+
 /* 
 ****************************************
     HEADER
@@ -109,11 +116,19 @@ h1 {
 ****************************************
 */
 
-main {
+
+/* 
+****************************************
+    ABOUT
+****************************************
+*/
+.about {
     grid-column: 2;
     grid-row: 2;
     background-color: var(--grey-100);
     margin-top: 5px;
+    display: flex;
+    justify-content: center;
 }
 
 /* 
@@ -121,7 +136,6 @@ main {
     CONTACTS
 ****************************************
 */
-
 .kontakt {
     grid-column: 2;
     grid-row: 2;
@@ -129,6 +143,8 @@ main {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
 }
 
 .kontakt__info--text {
@@ -141,15 +157,14 @@ main {
     color: #B11500;
 }
 
-
 h2 {
-    font-size: 1.5rem;
+    font-size: 18px;
     font-family: "Capriola", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #B11500;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .kontakt__info {
@@ -159,23 +174,29 @@ h2 {
     align-items: center;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    padding-block: 12%;
+    padding-inline: 20px;
+    row-gap: 20px;
 }
 
-.kontakt-adresa, .kontakt-doba, .kontakt-odkazy {
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt-adresa, .kontakt-doba, .kontakt-odkazy, .kontakt-blog a {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     background-color: var(--section);
     text-align: left;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    margin-top: 40px;
     padding: 20px;
-    border-radius: 20%;
 }
 
-.kontakt-odkazy a {
+.kontakt-blog a {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -200,9 +221,14 @@ h2 {
     grid-row: 3;
 }
 
+.kontakt-blog {
+    grid-column: 1;
+    grid-row: 4;
+}
+
 .kontakt__info-ikona {
-    width: 50px;
-    margin-bottom: 20px;
+    width: 40px;
+    margin-right: 20px;
 }
 
 
@@ -219,8 +245,6 @@ footer {
     grid-row: 3;
     border-top: 1px solid var(--grey-300);
     padding-inline: 50px;
-    margin-top: 5px;
-    margin-bottom: 20px;
     background-color: var(--grey-100);
     text-align: center;
     color: var(--text-color);
@@ -263,6 +287,71 @@ footer {
         cursor: pointer;
         border-bottom: 1px solid var(--primary);
     }
+
+    /* 
+    ****************************************
+        CONTACTS
+    ****************************************
+    */
+    .kontakt__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+        padding-block: 12%;
+    }
+    
+    .kontakt-adresa, .kontakt-doba, .kontakt-odkazy, .kontakt-blog a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--section);
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        
+        height: 176px;
+    }
+    
+    .kontakt-odkazy a {
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+        color: #B11500;
+        text-decoration: none;
+    }
+    
+    .kontakt-adresa {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .kontakt-doba {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .kontakt-odkazy {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .kontakt-blog {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    .kontakt__info-ikona {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
 
 @media(min-width: 1024px) {
@@ -291,41 +380,13 @@ footer {
     ****************************************
     */
     .kontakt__info {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         display: grid;
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto;
-        column-gap: 50px;
+        padding-block: 12%;
+        gap: 30px;
     }
-    
-    .kontakt-adresa, .kontakt-doba, .kontakt-odkazy {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--section);
-        text-align: center;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-        margin-block: 80px;
-        padding: 20px;
-        border-radius: 20%;
-        width: 210px;
-        height: 240px;
-    }
-    
-    .kontakt-odkazy a {
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
-        margin: 0;
-        color: #B11500;
-        text-decoration: none;
-    }
-    
+
     .kontakt-adresa {
         grid-column: 1;
         grid-row: 1;
@@ -340,9 +401,10 @@ footer {
         grid-column: 3;
         grid-row: 1;
     }
-    
-    .kontakt__info-ikona {
-        width: 50px;
-        margin-bottom: 20px;
+
+    .kontakt-blog {
+        grid-column: 4;
+        grid-row: 1;
     }
+    
 }
