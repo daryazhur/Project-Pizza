@@ -112,9 +112,131 @@ main {
 
 /* 
 ****************************************
-    OBSAH
+    DOMŮ
 ****************************************
 */
+.domu {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 20px;
+    padding-block: 40px;
+    padding-inline: 20px;
+    margin: 0;
+}
+
+.akce {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.akce__nabidka-logo, .akce__nabidka-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B11500;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.akce__ikona, .novinky__ikona {
+    width: 40px;
+    margin-right: 20px;
+}
+
+.akce__nadpis, .novinky__nadpis {
+    font-size: 18px;
+    font-family: "Capriola", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.obal {
+    background-color: #F17000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.akce__nabidka-nadpis, .novinky__nabidka-nadpis {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 16px;
+    font-family: "Capriola", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.pon, .ut, .st, .ct {
+    display: grid;
+    grid-template-columns: 80px auto;
+    grid-template-rows: 1;
+    align-items: center;
+    background-color: var(--section);
+    border-radius: 50% 0 0 50%;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+}
+
+.akce__nabidka-text, .novinky__nabidka-text {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    margin: 0;
+    color: #B11500;
+    grid-column: 2;
+    padding-block: 20px;
+    padding-right: 20px;
+}
+
+.novinky {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.novinky__nabidka-nadpis {
+    color: #B11500;
+    font-weight: 600;
+    margin-block: 10px;
+}
+
+.novinky__nabidka-text {
+    padding: 0 20px 20px 20px;
+}
+
+.novinky__nabidka {
+    background-color: var(--section);
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+}
+
+.novinky__nabidka-medovnik {
+    width: 100%;
+    margin: 0;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
 
 
 /* 
@@ -125,10 +247,64 @@ main {
 .about {
     grid-column: 2;
     grid-row: 2;
-    background-color: var(--grey-100);
     margin-top: 5px;
     display: flex;
     justify-content: center;
+
+    background-image: url(./../img/back2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 20px;
+    padding-block: 40px;
+    padding-inline: 20px;
+    margin: 0;
+}
+
+.about__img {
+    width: 100%;
+    margin-top: 20px;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.about__text {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+
+.prvni-cast {
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.druha-cast {
+    grid-row: 2;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.treti-cast {
+    grid-row: 3;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 
@@ -256,6 +432,7 @@ footer {
 }
 
 
+
 @media(min-width: 768px) {    
     .hlavicka {
         flex-direction: row;
@@ -286,6 +463,70 @@ footer {
         color: var(--primary);
         cursor: pointer;
         border-bottom: 1px solid var(--primary);
+    }
+    /* 
+    ****************************************
+        DOMŮ
+    ****************************************
+    */
+
+    .domu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .akce {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .novinky {
+        grid-column: 2;
+        grid-row: 1;
+    } 
+
+    /* 
+    ****************************************
+        ABOUT
+    ****************************************
+    */
+    .prvni-cast {
+        grid-row: 1;
+        grid-column: 1;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .druha-cast {
+        grid-row: 2;
+        grid-column: 1;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .treti-cast {
+        grid-row: 3;
+        grid-column: 1;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .treti-cast__text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about__img {
+        width: 40%;
+        margin: 0;
+        object-fit: cover;
     }
 
     /* 
@@ -354,7 +595,9 @@ footer {
     }
 }
 
-@media(min-width: 1024px) {
+
+
+@media(min-width: 960px) {
     body {
         display: grid;
         grid-template-columns: 120px auto 120px;
@@ -373,6 +616,24 @@ footer {
         color: var(--primary);
         cursor: pointer;
         border-bottom: 1px solid var(--primary);
+    }
+
+    .domu {
+        padding-inline: 120px;
+    }
+    /* 
+    ****************************************
+        ABOUT
+    ****************************************
+    */
+    .about {
+        padding-inline: 100px;
+    }
+    
+    .about__img {
+        width: 40%;
+        margin: 0;
+        object-fit: cover;
     }
     /* 
     ****************************************
