@@ -18,7 +18,7 @@ body {
     background-color: var(--background-color);
     display: grid;
     grid-template-columns: 20px auto 20px;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: 140px auto 60px;
 }
 
 h1 {
@@ -70,6 +70,10 @@ main {
     height: 100px;
 }
 
+/* .menu {
+    position: relative;
+} */
+
 .menu__checkbox {
     display: none;
 }
@@ -80,6 +84,9 @@ main {
     list-style: none;
     display: none;
     background-color: var(--grey-200);
+    z-index: inherit;
+    position: relative;
+    top: 30px;
 }
 
 .menu__item {
@@ -129,6 +136,11 @@ main {
     padding-block: 40px;
     padding-inline: 20px;
     margin: 0;
+
+    background-image: url(./../img/back1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .akce {
@@ -141,7 +153,7 @@ main {
     align-items: center;
     justify-content: center;
     background-color: #B11500;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.700);
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -162,13 +174,13 @@ main {
 
 .obal {
     background-color: #F17000;
-    border-radius: 50%;
+    border-radius: 0 50% 50% 0;
     display: flex;
     justify-content: start;
     align-items: center;
     width: 80px;
     height: 80px;
-    margin-right: 10px;
+    margin-right: 20px;
     grid-column: 1;
     grid-row: 1;
 }
@@ -190,10 +202,18 @@ main {
     grid-template-rows: 1;
     align-items: center;
     background-color: var(--section);
-    border-radius: 50% 0 0 50%;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.700);
     margin: 20px;
+    max-width: 300px;
+}
+
+.dny {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-auto-flow: row;
 }
 
 .akce__nabidka-text, .novinky__nabidka-text {
@@ -205,8 +225,7 @@ main {
     margin: 0;
     color: #B11500;
     grid-column: 2;
-    padding-block: 20px;
-    padding-right: 20px;
+    padding-inline: 20px;
 }
 
 .novinky {
@@ -227,7 +246,7 @@ main {
 .novinky__nabidka {
     background-color: var(--section);
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.700);
     margin: 20px;
 }
 
@@ -263,6 +282,7 @@ main {
     padding-block: 40px;
     padding-inline: 20px;
     margin: 0;
+    min-height: calc(100vh - 140px - 60px);
 }
 
 .about__img {
@@ -283,7 +303,7 @@ main {
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .prvni-cast {
@@ -321,6 +341,7 @@ main {
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+    min-height: calc(100vh - 140px - 60px);
 }
 
 .kontakt__info--text {
@@ -433,7 +454,7 @@ footer {
 
 
 
-@media(min-width: 768px) {    
+@media(min-width: 760px) {    
     .hlavicka {
         flex-direction: row;
     }
@@ -453,6 +474,8 @@ footer {
         align-items: center;
         gap: 20px;
         background-color: var(--grey-100);
+        position: none;
+        top: 0;
     }
 
     .menu__item {
@@ -597,7 +620,7 @@ footer {
 
 
 
-@media(min-width: 960px) {
+@media(min-width: 1100px) {
     body {
         display: grid;
         grid-template-columns: 120px auto 120px;
