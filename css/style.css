@@ -258,6 +258,171 @@ main {
 }
 
 
+
+/* 
+****************************************
+    MENU
+****************************************
+*/
+.menu-pizza {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    background-image: url(./../img/wood-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 140px - 60px);
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+}
+
+.navigace-list {
+    grid-column: 1;
+    grid-row: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--grey-100);
+}
+
+.list__item {
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    color: #B11500;
+    border-inline: 1px solid var(--grey-300);
+}
+
+.list__item:hover {
+    background-color: var(--grey-200);
+    cursor: pointer;
+}
+
+.pizza-sekce {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B11500;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.700);
+    padding: 20px;
+    margin-block: 20px;
+    margin-inline: 10px;
+}
+
+.nabidka-pizza__sekce {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 16px;
+    font-family: "Capriola", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.pizza-nabidka__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pizza-nabidka__nazev, .pizza-nabidka__popis, .pizza-nabidka__cena {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 16px;
+    font-family: "Capriola", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.pizza-nabidka__nazev {
+    color: #B11500;
+    margin-block: 20px;
+}
+
+.pizza-nabidka__popis {
+    padding-inline: 20px;
+}
+
+.pizza-nabidka__cena {
+    margin-block: 20px;
+}
+
+.pizza-nabidka__masova {
+    grid-column: 1;
+    grid-row:2;
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+}
+
+.pizza-nabidka {
+    grid-column: 1;
+    grid-row:2;
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+}
+
+.pizza-nabidka__pizza1, .pizza-nabidka__pizza2, .pizza-nabidka__pizza3,
+.pizza-nabidka__pizza4, .pizza-nabidka__pizza5, .pizza-nabidka__pizza6,
+.pizza-nabidka__pizza7, .pizza-nabidka__pizza8, .pizza-nabidka__pizza9, 
+.pizza-nabidka__pizza10 {
+    background-color: var(--grey-100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pizza-nabidka__pizza1, .pizza-nabidka__pizza5, 
+.pizza-nabidka__pizza7, .pizza-nabidka__pizza9 {
+    grid-column: 2;
+    grid-row: 1;
+} 
+
+.pizza-nabidka__pizza2, .pizza-nabidka__pizza6,
+.pizza-nabidka__pizza8, .pizza-nabidka__pizza10 {
+    grid-column: 2;
+    grid-row: 2;
+}
+ 
+.pizza-nabidka__pizza3 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.pizza-nabidka__pizza4 {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.pizza-nabidka__pizza10 {
+    margin-bottom: 10px;
+}
+
+
 /* 
 ****************************************
     ABOUT
