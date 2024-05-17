@@ -1,90 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tvoje pizza</title>
+---
+layout: sablona.njk
+title: Tvoje pizza
+---
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Source+Sans+3:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Source+Sans+3:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Hlavička -->
-    <div class="hlavicka">
-        <div class="logo">
-            <img class="hlavicka__logo" src="img/pizza-logo.png" alt="logo">
-            <h1>Tvoje pizza</h1>
+<section class="domu">
+    <div class="akce">
+        <div class="akce__nabidka">
+            <div class="akce__nabidka-logo">
+                <img class="akce__ikona" src="/img/hot-sale.png">
+                <h2 class="akce__nadpis">Akce</h2>
+            </div>
+            <div class="dny">
+                <div class="pon">
+                    <div class="obal">
+                        <h3 class="akce__nabidka-nadpis">Každé pondělí</h3>
+                    </div>
+                    <p class="akce__nabidka-text">-10% na všechny pizzy</p> 
+                </div>
+                <div class="ut">
+                    <div class="obal">
+                        <h3 class="akce__nabidka-nadpis">Každé úterý</h3>
+                    </div>
+                    <p class="akce__nabidka-text">Kup 2 pizzy - získej 3 pizzy</p> 
+                </div>
+                <div class="st">
+                    <div class="obal">
+                        <h3 class="akce__nabidka-nadpis">Každou středu</h3>
+                    </div>
+                    <p class="akce__nabidka-text">Kup jakoukoliv přílohu - získej 0.5 l nápoje</p> 
+                </div>
+                <div class="ct">
+                    <div class="obal">
+                        <h3 class="akce__nabidka-nadpis">Každý čtvrtek</h3>
+                    </div>
+                    <p class="akce__nabidka-text">Kup 2 ks dortu - získej mošt</p> 
+                </div>
+            </div>
         </div>
-        <nav class="menu">
-            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-            <label for="menu-checkbox" class="menu__toggler"><img class="menu__toggler--img" src="img/burger-menu.png"></label>
-            <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="index.html">Domů</a></li>
-                <li class="menu__item"><a class="menu__link" href="about.html">O nás</a></li>
-                <li class="menu__item"><a class="menu__link" href="menu.html">Menu</a></li>
-                <li class="menu__item"><a class="menu__link" href="contacts.html">Kontakty</a></li>
-            </ul>
-        </nav>
     </div>
-
-    <!-- Obsah -->
-    <main>
-        <section class="domu">
-            <div class="akce">
-                <div class="akce__nabidka">
-                    <div class="akce__nabidka-logo">
-                        <img class="akce__ikona" src="img/hot-sale.png">
-                        <h2 class="akce__nadpis">Akce</h2>
-                    </div>
-                    <div class="dny">
-                        <div class="pon">
-                            <div class="obal">
-                                <h3 class="akce__nabidka-nadpis">Každé pondělí</h3>
-                            </div>
-                            <p class="akce__nabidka-text">-10% na všechny pizzy</p> 
-                        </div>
-                        <div class="ut">
-                            <div class="obal">
-                                <h3 class="akce__nabidka-nadpis">Každé úterý</h3>
-                            </div>
-                            <p class="akce__nabidka-text">Kup 2 pizzy - získej 3 pizzy</p> 
-                        </div>
-                        <div class="st">
-                            <div class="obal">
-                                <h3 class="akce__nabidka-nadpis">Každou středu</h3>
-                            </div>
-                            <p class="akce__nabidka-text">Kup jakoukoliv přílohu - získej 0.5 l nápoje</p> 
-                        </div>
-                        <div class="ct">
-                            <div class="obal">
-                                <h3 class="akce__nabidka-nadpis">Každý čtvrtek</h3>
-                            </div>
-                            <p class="akce__nabidka-text">Kup 2 ks dortu - získej mošt</p> 
-                        </div>
-                    </div>
-                </div>
+    <div class="novinky">
+        <div class="akce__nabidka-logo">
+            <img class="novinky__ikona" src="/img/megaphone.png">
+            <h2 class="novinky__nadpis">Novinky</h2>
+        </div>
+        <div class="novinky__nabidka">
+            <img class="novinky__nabidka-medovnik" src="/img/medovnik.jpg" alt="medovnik">
+            <div class="medovnik__popis">
+                <h3 class="novinky__nabidka-nadpis">Dort "Medovník"</h3>
+                <p class="novinky__nabidka-text">Ochutnejte náš nový dort, všeobecně známý “Medovník”! <br>
+                    Medovník je dort typický velkým obsahem medu z perníkového těsta proloženého krémem.</p>
             </div>
-            <div class="novinky">
-                <div class="akce__nabidka-logo">
-                    <img class="novinky__ikona" src="img/megaphone.png">
-                    <h2 class="novinky__nadpis">Novinky</h2>
-                </div>
-                <div class="novinky__nabidka">
-                    <img class="novinky__nabidka-medovnik" src="img/medovnik.jpg" alt="medovnik">
-                    <div class="medovnik__popis">
-                        <h3 class="novinky__nabidka-nadpis">Dort "Medovník"</h3>
-                        <p class="novinky__nabidka-text">Ochutnejte náš nový dort, všeobecně známý “Medovník”! <br>
-                            Medovník je dort typický velkým obsahem medu z perníkového těsta proloženého krémem.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Patička -->
-    <footer>
-        <p class="paticka__text">2024, Tvoje pizza</p>
-    </footer>
-</body>
-</html>
+        </div>
+    </div>
+</section>

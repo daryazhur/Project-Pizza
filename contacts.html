@@ -1,76 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tvoje pizza</title>
+---
+layout: sablona.njk
+title: Tvoje pizza
+---
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Source+Sans+3:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Source+Sans+3:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Hlavička -->
-    <header class="hlavicka">
-        <div class="logo">
-            <img class="hlavicka__logo" src="img/pizza-logo.png" alt="logo">
-            <h1>Tvoje pizza</h1>
-        </div>
-        <nav class="menu">
-            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-            <label for="menu-checkbox" class="menu__toggler"><img class="menu__toggler--img" src="img/burger-menu.png"></label>
-            <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="index.html">Domů</a></li>
-                <li class="menu__item"><a class="menu__link" href="about.html">O nás</a></li>
-                <li class="menu__item"><a class="menu__link" href="menu.html">Menu</a></li>
-                <li class="menu__item"><a class="menu__link" href="contacts.html">Kontakty</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Obsah -->
-    <main>
-        <section class="kontakt">
-            <div class="kontakt__info">
-                <div class="kontakt-adresa">
-                    <img class="kontakt__info-ikona" src="img/mapa-ikona.png">
-                    <div class="info">
-                        <h2>Adresa</h2>
-                        <p class="kontakt__info--text">Rudobelská 3, <br> 220118 Minsk</p>
-                    </div>
-                </div>
-                <div class="kontakt-doba">
-                    <img class="kontakt__info-ikona" src="img/clock.png">
-                    <div class="info">
-                        <h2>Otevírací doba</h2>
-                        <p class="kontakt__info--text">Každý den <br> 11:00 - 22:00</p>
-                    </div>
-                </div>
-                <div class="kontakt-odkazy">
-                    <img class="kontakt__info-ikona" src="img/telefon-ikona.png">
-                    <div class="info">
-                        <h2>Kontakty</h2>
-                        <p class="kontakt__info--text">+420 123 456 789</p>
-                        <p class="kontakt__info--text">tvojepizza@mail.com</p>
-                    </div>
-                </div>
-                <div class="kontakt-blog">
-                    <a href="https://www.instagram.com/">
-                        <img class="kontakt__info-ikona" src="img/instagram-ikona.png">
-                        <div class="info">
-                            <h2>Náš blog</h2>
-                            <p class="kontakt__info--text">Ať vám nic neunikne! <br> Klikni na mně </p>
-                        </div>
-                    </a>
-                </div>
+<section class="kontakt">
+    <div class="kontakt__info">
+        <div class="kontakt-adresa">
+            <img class="kontakt__info-ikona" src="/img/mapa-ikona.png">
+            <div class="info">
+                <h2>Adresa</h2>
+                <p class="kontakt__info--text">Rudobelská 3, <br> 220118 Minsk</p>
             </div>
-        </section>
-    </main>
-
-    <!-- Patička -->
-    <footer>
-        <p class="paticka__text">2024, Tvoje pizza</p>
-    </footer>
-</body>
-</html>
+        </div>
+        <div class="kontakt-doba">
+            <img class="kontakt__info-ikona" src="/img/clock.png">
+            <div class="info">
+                <h2>Otevírací doba</h2>
+                <p class="kontakt__info--text">Každý den <br> 11:00 - 22:00</p>
+            </div>
+        </div>
+        <div class="kontakt-odkazy">
+            <img class="kontakt__info-ikona" src="/img/telefon-ikona.png">
+            <div class="info">
+                <h2>Kontakty</h2>
+                <p class="kontakt__info--text">+420 123 456 789</p>
+                <p class="kontakt__info--text">tvojepizza@mail.com</p>
+            </div>
+        </div>
+        <div class="kontakt-blog">
+            <a href="https://www.instagram.com/">
+                <img class="kontakt__info-ikona" src="/img/instagram-ikona.png">
+                <div class="info">
+                    <h2>Náš blog</h2>
+                    <p class="kontakt__info--text">Ať vám nic neunikne! <br> Klikni na mně </p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>  
