@@ -70,10 +70,6 @@ main {
     height: 100px;
 }
 
-/* .menu {
-    position: relative;
-} */
-
 .menu__checkbox {
     display: none;
 }
@@ -305,6 +301,7 @@ main {
     color: #B11500;
     margin-inline: 10px;
     background-color: var(--grey-100);
+    margin: 0;
 }
 
 .list__item:hover {
@@ -340,6 +337,8 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .pizza-nabidka__nazev, .pizza-nabidka__popis, .pizza-nabidka__cena {
@@ -357,14 +356,20 @@ main {
     color: #B11500;
     margin-block: 20px;
     font-weight: 600;
+    grid-column: 1;
+    grid-row: 2;
 }
 
 .pizza-nabidka__popis {
     padding-inline: 20px;
+    grid-column: 1;
+    grid-row: 3;
 }
 
 .pizza-nabidka__cena {
     margin-block: 20px;
+    grid-column: 1;
+    grid-row: 4;
 }
 
 .pizza-nabidka__masova {
@@ -390,11 +395,9 @@ main {
 .pizza-nabidka__pizza7, .pizza-nabidka__pizza8, .pizza-nabidka__pizza9, 
 .pizza-nabidka__pizza10 {
     background-color: var(--grey-100);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.700);
 }
 
@@ -598,8 +601,6 @@ h2 {
     width: 40px;
     margin-right: 20px;
 }
-
-
 
 
 /* 
