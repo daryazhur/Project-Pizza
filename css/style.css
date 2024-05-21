@@ -144,7 +144,7 @@ main {
     grid-row: 1;
 }
 
-.akce__nabidka-logo, .akce__nabidka-logo {
+.akce__nabidka-logo, .akce__novinka-logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,6 +152,10 @@ main {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.700);
     padding: 20px;
     margin-bottom: 20px;
+}
+
+.akce__novinka-logo {
+    margin-bottom: 40px;
 }
 
 .akce__ikona, .novinky__ikona {
